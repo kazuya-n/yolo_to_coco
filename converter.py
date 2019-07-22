@@ -65,7 +65,9 @@ def main(args):
                 an_idx += 1
 
     with open(args.out, mode="w")as f:
-        json.dump(json.dumps(out_dic), f)
+        # dump = json.dumps(out_dic)
+        # print(type(dump))
+        json.dump(out_dic, f, indent=2)
     
 
     print(f"{an_idx+1} annotations created for {im_idx} images.")
